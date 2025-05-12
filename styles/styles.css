@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #7B14Ef;
+    --secondary-color: #140326;
+    --dark-purple-color: #29074F;
+    --accent-color: #C497FE;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: outfit, Arial, Helvetica, sans-serif;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.9rem;
+}
+
+/* ---------- START - Cards Styles ------------ */
+.card-structure{
+    display: inline-block;
+    border: 1px solid black;
+}
+/* ---------- END - Cards Styles ------------ */
