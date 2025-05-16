@@ -1,39 +1,322 @@
-*{
+*,
+*::after,
+*::before{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 :root{
-    --primary-color: #7B14Ef;
-    --secondary-color: #140326;
-    --dark-purple-color: #29074F;
-    --accent-color: #C497FE;
-    --black-color: #000000;
-    --white-color: #FFFFFF;
+    --color-primary: #882E88;
+    --color-secondary: #222560;
+    --color-accent: #ff3400;
+    --color-body: #918ca4;
+    --color-border: #ccc;
+
+    /* Sizing */
+    --border-radius-30: 30px;
 }
 
+/* --------------- START - TYPOGHRAPHY -------------- */
 html{
+    /* 62.5% of 16px = 10px */
     font-size: 62.5%;
-    font-family: outfit, Arial, Helvetica, sans-serif;
 }
 
+body{
+ font-family: outfit, Arial, Helvetica, sans-serif;
+ font-size: 2.4rem;
+ line-height: 1.5;
+}
+
+h1,
+h2,
 h3{
+    color: #fff;
+}
+
+h1{
+    font-size: 5.4rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
     font-size: 2.4rem;
+  }
+}
+/* --------------- END - TYPOGHRAPHY -------------- */
+
+/* --------------- START - HERO -------------- */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
-p{
-    font-size: 1.6rem;
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
 }
 
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+}
+/* --------------- END - HERO -------------- */
+
+
+/* --------------- START - CONTAINER -------------- */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* --------------- END - CONTAINER -------------- */
+
+
+/* --------------- START - GRIDS -------------- */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* --------------- END - GRIDS -------------- */
+
+
+/* --------------- START - LINKS -------------- */
 a{
     text-decoration: none;
-    font-size: 1.9rem;
+}
+/* --------------- END - LINKS -------------- */
+
+
+/* --------------- START - BUTTONS -------------- */
+.btn{
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    outline: 0;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
-/* ---------- START - Cards Styles ------------ */
-.card-structure{
-    display: inline-block;
-    border: 1px solid black;
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
-/* ---------- END - Cards Styles ------------ */
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #3a8ffd;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #05cdf0;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: #ec3000;
+}
+
+.btn--outline {
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+
+.btn--outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+/* --------------- END - BUTTONS -------------- */
+
+
+/* --------------- START - CARDS -------------- */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+/* --------------- END - CARDS -------------- */
+
+
+/* --------------- START - PLAN -------------- */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}
+/* --------------- END - PLAN -------------- */
