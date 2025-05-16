@@ -98,6 +98,15 @@ p {
 }
 /* --------------- END - HERO -------------- */
 
+
+/* --------------- START - CONTAINER -------------- */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* --------------- END - CONTAINER -------------- */
+
+
 /* --------------- START - BUTTONS -------------- */
 .btn{
     border-radius: 40px;
@@ -206,10 +215,5 @@ p {
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
-}
-
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
 }
 /* --------------- START - BLOCKS -------------- */
