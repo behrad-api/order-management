@@ -126,6 +126,13 @@ p {
 /* --------------- END - GRIDS -------------- */
 
 
+/* --------------- START - LINKS -------------- */
+a{
+    text-decoration: none;
+}
+/* --------------- END - LINKS -------------- */
+
+
 /* --------------- START - BUTTONS -------------- */
 .btn{
     border-radius: 40px;
@@ -182,7 +189,7 @@ p {
 }
 
 .btn--outline:hover {
-  background: var(--color-headings);
+  background: var(--color-primary);
   color: #fff;
 }
 
