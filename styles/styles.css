@@ -210,36 +210,113 @@ a{
 }
 /* --------------- END - BUTTONS -------------- */
 
-/* --------------- START - BLOCKS -------------- */
-.block {
-  --padding-vertical: 6rem;
-  padding: var(--padding-vertical) 2rem;
+
+/* --------------- START - CARDS -------------- */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
 }
 
-.block__header {
-  text-align: center;
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
 }
 
-.block__heading {
-  margin-top: 0;
-}
-
-.block--dark {
-  background: #000;
-  color: #7b858b;
-}
-
-.block--dark .block__heading {
+.card--primary .card__header {
+  background: var(--color-primary);
   color: #fff;
 }
 
-.block--skewed-right {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: #fff;
 }
 
-.block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+.card--primary .badge--primary {
+  background: #126de4;
 }
-/* --------------- START - BLOCKS -------------- */
+
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+/* --------------- END - CARDS -------------- */
+
+
+/* --------------- START - PLAN -------------- */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}
+/* --------------- END - PLAN -------------- */
